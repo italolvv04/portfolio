@@ -1,41 +1,67 @@
-import React from 'react';
 import {
-  ChakraProvider,
-  Box,
-  Text,
-  Link,
+  Flex,
+  Heading,
+  IconButton,
+  Spacer,
+  useColorMode,
   VStack,
-  Code,
-  Grid,
-  theme,
 } from '@chakra-ui/react';
-import { ColorModeSwitcher } from './ColorModeSwitcher';
-import { Logo } from './Logo';
+import {
+  FaSun,
+  FaMoon,
+  FaInstagram,
+  FaGithub,
+  FaLinkedin,
+} from 'react-icons/fa';
+import Header from './components/Header';
+import Profile from './components/Profile';
+import Social from './components/Social';
 
 function App() {
+  const { colorMode, toggleColorMode } = useColorMode();
+  const isDark = colorMode === 'dark';
+
   return (
-    <ChakraProvider theme={theme}>
-      <Box textAlign="center" fontSize="xl">
-        <Grid minH="100vh" p={3}>
-          <ColorModeSwitcher justifySelf="flex-end" />
-          <VStack spacing={8}>
-            <Logo h="40vmin" pointerEvents="none" />
-            <Text>
-              Edit <Code fontSize="xl">src/App.js</Code> and save to reload.
-            </Text>
-            <Link
-              color="teal.500"
-              href="https://chakra-ui.com"
-              fontSize="2xl"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn Chakra
-            </Link>
-          </VStack>
-        </Grid>
-      </Box>
-    </ChakraProvider>
+    <VStack p={5}>
+      <Flex w="100%">
+        <Heading ml="8" size="md" fontWeight="semibold" color="cyan.400">
+          Portfólio
+        </Heading>
+
+        <Spacer></Spacer>
+
+        <IconButton
+          icon={<FaLinkedin />}
+          isRound="true"
+          onClick={() => window.open('https://www.linkedin.com/in/italo-vieira/')}
+        ></IconButton>
+
+        <IconButton
+          ml={2}
+          icon={<FaInstagram />}
+          isRound="true"
+          onClick={() => window.open('https://www.instagram.com/italolvv/')}
+        ></IconButton>
+
+        <IconButton
+          ml={2}
+          icon={<FaGithub />}
+          isRound="true"
+          onClick={() => window.open('https://github.com/italolvv04')}
+        ></IconButton>
+
+        <IconButton
+          ml={8}
+          icon={isDark ? <FaSun /> : <FaMoon />}
+          isRound="true"
+          onClick={toggleColorMode}
+        ></IconButton>
+      </Flex>
+
+      <Header></Header>
+      <Social></Social>
+      <Profile></Profile>
+    </VStack>
   );
 }
 
