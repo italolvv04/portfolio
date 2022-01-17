@@ -12,55 +12,61 @@ function Social() {
   return (
     <HStack spacing="24">
       <Flex
-        rounded="xl"
-        direction="column"
-        mt={4}
-        ml={isNotSmallerScreen ? 4 : 0}
-        bg="orange.300"
-        h="6vh"
-        w="6vh"
-        justify="flex-end"
+        direction={isNotSmallerScreen ? 'row' : 'column'}
+        w="100%"
+        maxWidth={{ base: '100vh', md: '130vh', lg: '130vh', xl: '130vh' }}
       >
-        <Icon as={DiHtml5} boxSize="50" />
-      </Flex>
+        <Flex
+          rounded="xl"
+          direction={isNotSmallerScreen ? 'row' : 'column'}
+          mt={8}
+          ml={isNotSmallerScreen ? 4 : 0}
+          bg="orange.300"
+          h="6vh"
+          w="6vh"
+          justify="flex-end"
+        >
+          <Icon as={DiHtml5} boxSize="50" mr={1} mt={1} />
+        </Flex>
 
-      <Flex
-        rounded="xl"
-        direction="column"
-        mt={4}
-        ml={isNotSmallerScreen ? 4 : 0}
-        bg="blue.400"
-        h="6vh"
-        w="6vh"
-        justify="flex-end"
-      >
-        <Icon as={DiCss3} boxSize="50" />
-      </Flex>
+        <Flex
+          rounded="xl"
+          direction={isNotSmallerScreen ? 'row' : 'column'}
+          mt={8}
+          ml={isNotSmallerScreen ? 4 : 0}
+          bg="blue.400"
+          h="6vh"
+          w="6vh"
+          justify="flex-end"
+        >
+          <Icon as={DiCss3} boxSize="50" mt={1} mr={1} />
+        </Flex>
 
-      <Flex
-        rounded="xl"
-        direction="column"
-        mt={4}
-        ml={isNotSmallerScreen ? 4 : 0}
-        bg="yellow.400"
-        h="6vh"
-        w="6vh"
-        justify="flex-end"
-      >
-        <Icon as={DiJavascript1} boxSize="50" />
-      </Flex>
+        <Flex
+          rounded="xl"
+          direction={isNotSmallerScreen ? 'row' : 'column'}
+          mt={8}
+          ml={isNotSmallerScreen ? 4 : 0}
+          bg="yellow.400"
+          h="6vh"
+          w="6vh"
+          justify="flex-end"
+        >
+          <Icon as={DiJavascript1} boxSize="50" mt={1} mr={1} />
+        </Flex>
 
-      <Flex
-        rounded="xl"
-        direction="column"
-        mt={4}
-        ml={isNotSmallerScreen ? 4 : 0}
-        bg="red.300"
-        h="6vh"
-        w="6vh"
-        justify="flex-end"
-      >
-        <Icon as={FaFigma} boxSize="50" />
+        <Flex
+          rounded="xl"
+          direction={isNotSmallerScreen ? 'row' : 'column'}
+          mt={8}
+          ml={isNotSmallerScreen ? 4 : 0}
+          bg="red.300"
+          h="6vh"
+          w="6vh"
+          justify="flex-end"
+        >
+          <Icon as={FaFigma} boxSize="50" mt={1} />
+        </Flex>
       </Flex>
     </HStack>
   );

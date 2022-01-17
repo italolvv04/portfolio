@@ -32,12 +32,14 @@ function Header() {
               Italo Vieira
             </Text>
             <Text color={isDark ? 'gray.200' : 'gray.500'}>
-              Desenvolvedor Front End & Mobile 🗣
+              🖥️ Front End & Mobile Developer 📲
             </Text>
             <Button
               mt={8}
               colorScheme="blue"
-              onClick={() => window.open('https://api.whatsapp.com/send?phone=5562984353561')}
+              onClick={() =>
+                window.open('https://api.whatsapp.com/send?phone=5562984353561')
+              }
             >
               Entrar em contato
             </Button>

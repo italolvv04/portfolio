@@ -32,7 +32,6 @@ function App() {
 
         <IconButton
           icon={<FaLinkedin />}
-          bg="blue.500"
           isRound="true"
           onClick={() =>
             window.open('https://www.linkedin.com/in/italo-vieira/')
@@ -42,7 +41,6 @@ function App() {
         <IconButton
           ml={2}
           icon={<FaInstagram />}
-          bg="purple.300"
           isRound="true"
           onClick={() => window.open('https://www.instagram.com/italolvv/')}
         ></IconButton>
