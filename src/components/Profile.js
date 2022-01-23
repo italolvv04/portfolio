@@ -50,7 +50,7 @@ function Profile() {
           >
             <Icon color="black" p="4" as={DiAndroid} w="24" h="24" />
             <Text color="black" p="4" fontSize="xl" fontWeight="semibold">
-              Flutter Apps
+              React Native
             </Text>
           </Flex>
           <Flex
