@@ -3,6 +3,7 @@ import { Flex, Stack, Box, Text, Button } from '@chakra-ui/react';
 import { Image } from '@chakra-ui/image';
 import { useColorMode } from '@chakra-ui/color-mode';
 import { useMediaQuery } from '@chakra-ui/media-query';
+import { AiOutlineWhatsApp } from "react-icons/ai";
 
 function Header() {
   const { colorMode } = useColorMode();
@@ -36,6 +37,7 @@ function Header() {
             </Text>
             <Button
               mt={8}
+              leftIcon={<AiOutlineWhatsApp fontSize={18} />}
               colorScheme="blue"
               onClick={() =>
                 window.open('https://api.whatsapp.com/send?phone=5562984353561')
