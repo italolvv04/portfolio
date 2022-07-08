@@ -2,7 +2,7 @@
 
 Projeto desenvolvido utilizando React, dessa vez aprendendo um pouco mais sobre o tão conhecido Chakra UI.
 
-🖥️ Acesse o portfólio clicando [aqui](https://portfolio-delta-sepia.vercel.app/)
+🖥️ Acesse o portfólio clicando [aqui](https://italo-vieira.vercel.app/)
 
 ## 🚀 Running 🚀
 
