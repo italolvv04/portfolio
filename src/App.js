@@ -1,6 +1,5 @@
 import {
   Flex,
-  Heading,
   IconButton,
   Spacer,
   useColorMode,
@@ -24,10 +23,6 @@ function App() {
   return (
     <VStack p={5}>
       <Flex w="100%">
-        <Heading ml="8" size="md" fontWeight="semibold" color="cyan.400">
-          Portfólio
-        </Heading>
-
         <Spacer></Spacer>
 
         <IconButton
