@@ -3,13 +3,15 @@ import { Flex, Stack, Box, Text, Button } from '@chakra-ui/react';
 import { Image } from '@chakra-ui/image';
 import { useColorMode } from '@chakra-ui/color-mode';
 import { useMediaQuery } from '@chakra-ui/media-query';
-import { AiOutlineWhatsApp } from "react-icons/ai";
+import { AiOutlineWhatsApp, AiOutlineDownload } from "react-icons/ai";
+import Curriculo from '../Assets/Images/curriculo-italo.pdf';
 
 function Header() {
   const { colorMode } = useColorMode();
   const isDark = colorMode === 'dark';
 
   const [isNotSmallerScreen] = useMediaQuery('(min-width:600px)');
+  const [isFullScreen] = useMediaQuery('(min-width:1228px)');
 
   return (
     <div>
@@ -37,6 +39,7 @@ function Header() {
             </Text>
             <Button
               mt={8}
+              mr={isNotSmallerScreen ? '4' : '0'}
               leftIcon={<AiOutlineWhatsApp fontSize={18} />}
               colorScheme="blue"
               onClick={() =>
@@ -44,6 +47,14 @@ function Header() {
               }
             >
               Entrar em contato
+            </Button>
+            <Button
+              mt={isNotSmallerScreen ? '8' : '4'}
+              width="188px"
+              leftIcon={<AiOutlineDownload fontSize={18} />}
+              colorScheme="blue"
+            >
+              <a href={Curriculo} download="Curriculo Italo Vieira"> Download CV </a>
             </Button>
           </Box>
           <Image
