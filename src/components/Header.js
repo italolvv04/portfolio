@@ -11,7 +11,6 @@ function Header() {
   const isDark = colorMode === 'dark';
 
   const [isNotSmallerScreen] = useMediaQuery('(min-width:600px)');
-  const [isFullScreen] = useMediaQuery('(min-width:1228px)');
 
   return (
     <div>
@@ -39,6 +38,7 @@ function Header() {
             </Text>
             <Button
               mt={8}
+              width="188px"
               mr={isNotSmallerScreen ? '4' : '0'}
               leftIcon={<AiOutlineWhatsApp fontSize={18} />}
               colorScheme="blue"

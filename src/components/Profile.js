@@ -17,10 +17,10 @@ function Profile() {
       maxWidth={{ base: '100vh', md: '130vh', lg: '130vh', xl: '130vh' }}
     >
       <Box alignSelf="center" pt={isNotSmallerScreen ? '32' : '10'} px={32}>
-        <Heading fontWeight="extrabold" color="cyan.500" size="4xl">
+        <Heading fontWeight="extrabold" color="cyan.500" size="4xl" flex={1} align="center" justify="center">
           2
         </Heading>
-        <Text fontSize="2xl" color="gray.400">
+        <Text fontSize="2xl" color="gray.400" flex={1} align="center" justify="center">
           Anos de Experiência{' '}
         </Text>
       </Box>
