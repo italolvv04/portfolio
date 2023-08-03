@@ -71,7 +71,7 @@ function Profile() {
           >
             <Icon color="white" p="4" as={DiAndroid} w="24" h="24" />
             <Text color="white" p="4" fontSize="xl" fontWeight="semibold">
-              React Native
+              Next
             </Text>
           </Flex>
         </Flex>
